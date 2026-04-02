@@ -1,179 +1,28 @@
-/* ============= Google Fonts ============= */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap");
-
-/* ============= CSS Variables ============= */
-:root {
-  /* ============= Light Theme Colors ============= */
-  --first-color: hsl(271, 76%, 53%);
-  --title-color: hsl(0, 0%, 40%);
-  --text-color: hsl(0, 0%, 50%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(0, 0%, 93%);
-  --border-color: hsl(0, 0%, 87%);
-  --text-white: #fff;
-
-  /* ============= Fonts ============= */
-  --body-font: "Open Sans", sans-serif;
-  --second-font: "Poppins", sans-serif;
-
-  --big-font-size: 56px;
-  --h1-font-size: 50px;
-  --h2-font-size: 32px;
-  --h3-font-size: 24px;
-  --large-font-size: 18px;
-  --normal-font-size: 16px;
-  --small-font-size: 15px;
-  --smaller-font-size: 14px;
-  --tiny-font-size: 12px;
-
-  /* ============= Font Weight ============= */
-  --weight-400: 400;
-  --weight-500: 500;
-  --weight-600: 600;
-  --weight-700: 700;
-  --weight-800: 800;
+.section-container {
+  width: 1300px;
 }
-
-/* ============= Dark Theme Colors ============= */
-.dark-theme {
-  --title-color: hsl(0, 0%, 100%);
-  --text-color: hsl(0, 0%, 80%);
-  --body-color: hsl(0, 0%, 7%);
-  --container-color: hsl(0, 1%, 18%);
-  --border-color: hsl(0, 0%, 15%);
+.title,
+.para {
+  font-kerning: none;
+  -webkit-text-rendering: optimizeSpeed;
+  text-rendering: optimizeSpeed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
-
-/* ============= Responsive Typography ============= */
-@media screen and (max-width: 1200px) {
-  :root {
-    --big-font-size: 36px;
-    --h1-font-size: 32px;
-    --h2-font-size: 24px;
-    --h3-font-size: 20px;
-    --large-font-size: 16px;
-    --normal-font-size: 15px;
-    --small-font-size: 14px;
-    --smaller-font-size: 13px;
-    --tiny-font-size: 11px;
+@media only screen and (max-width: 1600px) {
+  .section-container {
+    width: 1200px;
+    max-width: calc(100% - 160px);
   }
 }
-
-/* ============= Base ============= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@media only screen and (max-width: 1400px) {
+  .section-container {
+    width: 900px;
+  }
 }
-
-body,
-input,
-textarea {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  font-weight: var(--weight-500);
-}
-
-body {
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: var(--title-color);
-  font-family: var(--second-font);
-  font-weight: var(--weight-700);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-button,
-input,
-textarea {
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-/* ============= Reusable CSS ============= */
-.container {
-  max-width: 1140px;
-  margin-inline: auto;
-  padding-inline: 16px;
-}
-
-.grid {
-  display: grid;
-  gap: 24px;
-}
-
-.section {
-  padding-block: 60px;
-}
-
-.section-title {
-  font-size: var(--big-font-size);
-  font-weight: var(--weight-800);
-  text-align: center;
-  margin-bottom: 55px;
-}
-
-.section-title span {
-  color: var(--first-color);
-}
-
-.button {
-  display: inline-block;
-  color: var(--title-color);
-  border: 1px solid var(--first-color);
-  padding: 12px 70px 12px 30px;
-  border-radius: 35px;
-  font-family: var(--second-font);
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-500);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.25s ease-in-out;
-}
-
-.button:hover {
-  color: var(--text-white);
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--first-color);
-  transform: translateX(100%);
-  z-index: -1;
-  transition: all 0.4s ease-out;
-}
-
-.button:hover::before {
-  transform: translateX(0);
-}
-
-.button-icon {
-  background-color: var(--first-color);
-  position: absolute;
-  inset-block: -3px;
-  right: 0;
-  width: 50px;
-  color: var(--text-white);
-  font-size: var(--large-font-size);
-  text-align: center;
-  line-height: 56px;
+@media only screen and (max-width: 900px) {
+  .section-container {
+    width: 500px;
+    max-width: var(--cWidth);
+  }
 }
