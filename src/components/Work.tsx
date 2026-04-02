@@ -9,13 +9,14 @@ const projects = [
     category: "Healthcare Mobile App (Personal Project)",
     tools: "React Native, iOS, Android, CRUD",
     image: "/images/mediReminder.jpg",
+    url: 'false',
   },
   {
     title: "Expense Tracker App",
     category: "Personal Finance App (Personal Project)",
     tools: "React Native, iOS, Android, CRUD",
     image: "/images/expenseTracker.png",
-    url: ''
+    url: 'https://expo.dev/accounts/ianuragab/projects/expense-tracker/builds/2b251931-56f6-4ccb-a1b2-398b3f5f4954'
   },
   {
     title: "Bijnis Retailer Platform",
@@ -107,7 +108,7 @@ const Work = () => {
                       <div className="carousel-number">
                         <h3>0{index + 1}</h3>
                       </div>
-                      <div className="carousel-details" onClick={() => window.open(project?.url)}>
+                      <div className="carousel-details" onClick={() => project?.url != 'false' && window.open(project?.url)}>
                         <h4>{project.title}</h4>
                         <p className="carousel-category">
                           {project.category}
