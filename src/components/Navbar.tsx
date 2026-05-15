@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
@@ -46,11 +46,11 @@ const Navbar = () => {
           AB
         </a>
         <a
-          href="mailto:anuragbhardwaj3108@gmail.com"
+          href="mailto:im.anurag.bhardwaj@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          anuragbhardwaj3108@gmail.com
+          im.anurag.bhardwaj@gmail.com
         </a>
         <ul>
           <li>
