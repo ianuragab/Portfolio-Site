@@ -22,6 +22,7 @@ const Contact = () => {
             <a
               href="https://github.com/ianuragab"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -30,6 +31,7 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/ianuragab"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -38,6 +40,7 @@ const Contact = () => {
             <a
               href="https://www.instagram.com/ianuragab"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >

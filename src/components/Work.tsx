@@ -9,34 +9,35 @@ const projects = [
     category: "Healthcare Mobile App (Personal Project)",
     tools: "React Native, iOS, Android, CRUD",
     image: "/images/mediReminder.jpg",
+    url: "",
   },
   {
     title: "Expense Tracker App",
     category: "Personal Finance App (Personal Project)",
     tools: "React Native, iOS, Android, CRUD",
     image: "/images/expenseTracker.png",
-    url: ''
+    url: "",
   },
   {
     title: "Bijnis Retailer Platform",
     category: "B2B E-Commerce (Bijnis)",
     tools: "React.js, Redux Toolkit, TypeScript, REST APIs",
     image: "/images/bijnis.png",
-    url: 'https://www.bijnis.com'
+    url: "https://www.bijnis.com",
   },
   {
     title: "AI Mock Interview App",
     category: "AI-Powered Platform (Personal Project)",
     tools: "Next.js, Gemini AI, Speech-to-Text API",
-    image: "/images/ai-interview.png",
-    url: 'https://github.com/ianuragab/Mock-Interview'
+    image: "/images/preview.png",
+    url: "https://github.com/ianuragab/Mock-Interview",
   },
   {
     title: "Movix",
     category: "Movie Discovery Web App (Personal Project)",
     tools: "React.js, TypeScript, REST APIs, Pagination",
-    image: "/images/dashboard.png",
-    url: 'https://github.com/ianuragab/Movix'
+    image: "/images/placeholder.webp",
+    url: "https://github.com/ianuragab/Movix",
   },
 ];
 
@@ -107,7 +108,7 @@ const Work = () => {
                       <div className="carousel-number">
                         <h3>0{index + 1}</h3>
                       </div>
-                      <div className="carousel-details" onClick={() => window.open(project?.url)}>
+                      <div className="carousel-details">
                         <h4>{project.title}</h4>
                         <p className="carousel-category">
                           {project.category}
@@ -119,7 +120,12 @@ const Work = () => {
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
-                      <WorkImage image={project.image} alt={project.title} />
+                      <WorkImage
+                        image={project.image}
+                        alt={`${project.title} by Anurag Bhardwaj`}
+                        link={project.url || undefined}
+                        loading={index === 0 ? "eager" : "lazy"}
+                      />
                     </div>
                   </div>
                 </div>
