@@ -1,0 +1,18 @@
+{
+  "name": "Anurag Bhardwaj",
+  "short_name": "Anurag Bhardwaj",
+  "description": "Personal authority website for Anurag Bhardwaj, Software Engineer at bijnis.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f5ee",
+  "theme_color": "#f8f5ee",
+  "icons": [
+    {
+      "src": "/images/abLogo.png",
+      "sizes": "505x505",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

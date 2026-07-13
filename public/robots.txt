@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /private/
+Disallow: /*.html$
 
-Sitemap: https://portfolio-site-two-indol.vercel.app/sitemap.xml
+Sitemap: https://anuragdev-omega.vercel.app/sitemap.xml

@@ -1,103 +1,67 @@
-# 🚀 Anurag Bhardwaj — Portfolio Website
+# Anurag Bhardwaj Portfolio
 
-Welcome to the source code of my personal portfolio website — a modern, interactive, and performance-focused developer portfolio built to showcase my projects, skills, and creative frontend engineering work.
+Static-first personal authority website for Anurag Bhardwaj (`ianuragab`), Software Engineer at bijnis in New Delhi, India.
 
-This portfolio highlights my work in frontend development, animations, 3D experiences, and modern web technologies.
+The site is built with Vite, React and TypeScript. Public pages are prerendered to HTML during the production build so the core content, metadata and structured data are available without JavaScript.
 
----
+## Route Structure
 
-## ✨ Features
+- `/` - Homepage
+- `/about` - Professional profile
+- `/projects` - Project index
+- `/projects/bijnis-retailer-platform` - Bijnis retailer B2B e-commerce website case study
+- `/projects/ai-mock-interview-app` - Case study
+- `/projects/medi-reminder-app` - Case study
+- `/projects/expense-tracker-app` - Case study
+- `/projects/bank-transaction-system` - Bank Transaction System case study
+- `/experience` - Professional experience
+- `/writing` - Writing index
+- `/writing/[slug]` - Generated when a published article exists in `src/content/articles.ts`
+- `/contact` - Contact and social profiles
 
-* ⚡ Smooth and immersive UI animations using GSAP
-* 🎨 Interactive 3D visuals powered by Three.js & WebGL
-* 📱 Fully responsive across devices
-* 🚀 Optimized performance and clean architecture
-* 🧩 Reusable and scalable component structure
-* 🌙 Modern developer-focused design
+## Content Source Of Truth
 
----
+- `src/content/profile.ts` - identity, role, company, location, social links, site URL, contact details and content TODOs
+- `src/content/projects.ts` - project data and case-study content
+- `src/content/experience.ts` - professional experience
+- `src/content/articles.ts` - Markdown-ready article records and planned topics
 
-## 🛠️ Tech Stack
-
-* **React.js**
-* **TypeScript**
-* **GSAP**
-* **Three.js**
-* **WebGL**
-* **HTML5**
-* **CSS3**
-* **JavaScript**
-
----
-
-## 📸 Preview
-
-![Portfolio Preview](public/images/preview.png)
-
----
-
-## ⚙️ Getting Started
-
-Clone the repository and install dependencies:
+Set `VITE_SITE_URL` when moving from the current Vercel URL to a custom domain.
 
 ```bash
-git clone https://github.com/ianuragab/Portfolio-Site.git
-cd Portfolio-Site
-npm install
+VITE_SITE_URL=https://anuragdev-omega.vercel.app
+VITE_GOOGLE_SITE_VERIFICATION=
 ```
 
-Run the development server:
+Do not hard-code a fake Search Console token. Set `VITE_GOOGLE_SITE_VERIFICATION` only after Google provides the real value.
+
+## Commands
 
 ```bash
 npm run dev
-```
-
-Build for production:
-
-```bash
+npm run lint
 npm run build
+npm run preview
 ```
 
----
+`npm run build` runs TypeScript, builds the Vite client assets, builds the SSR renderer, prerenders every public route, and writes final `dist/sitemap.xml` and `dist/robots.txt`.
 
-## 📌 GSAP Club Plugins Notice
+## Search Console Deployment Checklist
 
-This project currently uses modified/trial versions of GSAP Club plugins for development purposes.
+1. Deploy the production build.
+2. Confirm the canonical production URL in `VITE_SITE_URL`.
+3. Verify that `/robots.txt` loads.
+4. Verify that `/sitemap.xml` loads.
+5. Test the homepage and article schema with Google Rich Results Test or Schema Markup Validator.
+6. Connect Google Search Console.
+7. Submit the sitemap.
+8. Inspect the homepage URL.
+9. Request indexing after meaningful updates.
+10. Monitor indexing, Core Web Vitals and search queries.
 
-⚠️ Trial plugins are **not allowed for production hosting or deployment**.
+## Factual Content Still Needed
 
-To use the project commercially or deploy it publicly, you must install the official GSAP Club plugins.
-
-Learn more here:
-👉 [https://gsap.com/docs/v3/Installation/](https://gsap.com/docs/v3/Installation/)
-
----
-
-## 🌐 Live Demo
-
-Add your deployed portfolio link here:
-
-```bash
-https://your-portfolio-link.com
-```
-
----
-
-## 🤝 Contributing
-
-Contributions, suggestions, and feedback are always welcome.
-
-If you'd like to improve something, feel free to fork the repository and create a pull request.
-
----
-
-
-## 💫 Connect With Me
-
-* LinkedIn: [http://linkedin.com/in/ianuragab](http://linkedin.com/in/ianuragab)
-* Portfolio: [https://portfolio-site-two-indol.vercel.app/](https://portfolio-site-two-indol.vercel.app/)
-* Email: im.anurag.bhardwaj@gmail.com
-
----
-
-⭐ If you liked this project, consider giving it a star on GitHub!
+- Exact start and end months for each professional role.
+- Public live or GitHub links for MediReminder and Expense Tracker if available.
+- Verified article drafts before publishing writing detail pages.
+- A real professional profile image if a photo-led identity is preferred over the AB monogram.
