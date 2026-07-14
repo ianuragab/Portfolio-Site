@@ -14,7 +14,7 @@ export const profile = {
   siteUrl: SITE_URL,
   profileImage: "/images/abLogo.png",
   profileImageAlt: "AB monogram used by Anurag Bhardwaj",
-  socialPreviewImage: "/images/anurag-bhardwaj-software-engineer-og.svg",
+  socialPreviewImage: "/images/anurag-bhardwaj-software-engineer-og.jpg",
   resumeUrl: "/images/anurag-july.pdf",
   email: "im.anurag.bhardwaj@gmail.com",
   biography:
